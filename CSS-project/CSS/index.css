@@ -1,0 +1,338 @@
+
+/*老师好，之前没有注意banner区的塌陷问题，已修改，本次主要修改gallery区li的居中问题，
+之前浮动的盒子没有想到合适的办法，这次主要把ul转化为行内元素，然后进行了居中对齐显示，效果不错，
+感谢老师再次审批，由于在赶进度，about没有修改，望老师知悉，感谢。如有任何问题希望老师指正*/
+
+*{
+	padding: 0;     /*声明*/
+	margin: 0;
+	font-family: Microsoft YaHei UI
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;   /*文字加粗*/
+}
+.header{
+	width: 100%;
+	height: 100px;
+	background-color: #07cbc9;
+	position: fixed;         /*固定定位*/
+	top: 0;
+	z-index: 999;  /*最高级别*/
+}
+.logo {
+	padding-left:100px; 
+	padding-top: 25px;     /*垂直居中对齐*/
+	float: left;
+}
+.logo img{
+	line-height: 100px;
+
+}
+.nav ul{
+	float: right; 
+	margin-right: 100px;    
+}
+.nav ul li{
+	display: inline-block;
+	height: 100px;
+	line-height: 100px;
+	width: 100px;
+	text-align: center;
+}
+.nav ul li:hover {
+	background-color: #000;
+}
+/*头部css结束*/
+/*banner区开始*/
+.banner{
+	width: 100%;
+	margin-top: 100px;
+}
+.bg-banner img {
+	width: 100%;
+	height: 600px;
+}
+.layer{
+	width: 100%;
+	height: 600px;
+	background-color: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 100px;   /*覆盖到banner区*/
+	left: 0;
+}
+.layer .layer-text{
+	height: 360px;
+	width: 600px;
+	position: relative;
+	top: 50%;
+	margin-top: -180px;
+	left:50%;
+	margin-left: -300px;
+	text-align: center;
+}
+.layer-text input,.layer-text textarea,.layer-text button{
+	width: 400px;
+	height: 40px;
+	background-color: rgba(0,0,0,0);
+	border-color: rgba(255,255,255,0.5);
+	color: rgba(255,255,255,0.7);
+	font-size:16px;
+	display: inline-block;
+	margin-bottom: 20px;
+	padding:0 10px;
+	outline-color: #07cbc9;   /*修改鼠标放入输入框的颜色*/
+}
+.layer-text input:hover{
+	border:2px solid #07cbc9;
+}
+.layer-text textarea{
+	height: 80px;
+	border:2px solid rgba(255,255,255,0.5);
+}
+.layer-text textarea:hover{
+	border:2px solid #07cbc9;
+}
+.layer-text button{
+	width: 160px;
+	color: rgba(255,255,255,0.5);
+}
+.layer-text button:hover{
+	background-color: #07cbc9;  /*鼠标放入背景的颜色*/
+	color: #fff;
+
+}
+/*banner区结束*/
+/*about区开始*/
+.about{
+	/*height: 1000px;*/
+	width: 100%;
+	padding: 30px 0;
+	overflow: hidden;        /*清除浮动*/
+	/*border:1px solid red;*/   /*辅助区*/
+}
+.about-top{
+	width: 40%;
+	text-align: center;
+	margin: 0 auto;
+}
+.about-line{
+	height: 10px;
+	width: 50px;
+	border-bottom: 2px solid #07cbc9;
+	margin: 0 auto;
+}
+.about-top p{
+	margin-top: 10px;
+	color: rgba(0,0,0,0.5);
+}
+.about-bottom{
+	width: 100%;
+	margin-top: 30px;
+	overflow: hidden;        /*清除浮动*/
+}
+.about-bottom-top{
+	float: left;
+	width: 20%;
+}
+.about-bottom-midden{
+	float: left;
+	width: 43%;
+	margin: 0 auto;
+}
+.about-bottom-midden img{
+	width: 100%;
+}
+.about-bottom-bottom{
+	float: left;
+	width: 20%;
+	margin-left: 40px;
+	text-align: center;
+}
+.about-bottom-bottom-1,.about-bottom-bottom-2{
+	width: 240px;
+	height: 150px;
+	border:1px solid #07cbc9;
+}
+.about-bottom-bottom-1 h1,.about-bottom-bottom-2 h1{
+	margin-top:20px;
+}
+.about-bottom-bottom-1 h3, .about-bottom-bottom-2 h3{
+	margin-top:10px;
+}
+.about-bottom-bottom-2{
+	margin-top: 20px;
+}
+.about-bottom-left{
+	float: left;
+	width: 28%;
+	/*border:1px solid red;*/     /*辅助框*/
+}
+.about-bottom-left .word{
+	width: 200px;
+	text-align: center;
+	margin-left: 120px;
+	/*border:1px solid red;*/  /*辅助框*/
+}
+.about-bottom-left .text{
+	width: 310px;
+	height: 180px;
+	border:2px solid rgba(0,0,0,0.2);   /*辅助框*/
+	padding: 35px 25px;
+	position: relative;
+	left: 120px;
+	background-color: rgba(255,255,255,0.4);
+}
+.text button{
+	width: 100px;
+	height: 45px;
+	background-color: black;
+	color:#fff;
+	font-size: 16px;
+	margin-top: 20px;
+}
+.text button:hover{
+	background-color: #fff;
+	color: #000;
+	border:2px solid black;
+}
+.about-foot{
+	width: 100%;
+	margin-top: 50px;
+}
+.about-foot div{
+	float: left;
+	width: 25%;
+	height: 300px;
+	overflow: hidden;
+	/*border:1px solid red;*/   /*辅助线*/
+	position: relative;
+}
+.about-foot div img{
+	width: 100%;
+}
+.about-foot .about-foot-t{
+	background-color: #07cbc9;
+}
+.about-foot div .triangle-l,.about-foot div .triangle-r{       /*三角形*/
+	position:absolute;
+	right: 0;
+	top: 140px;
+	height: 0;
+	width: 0;
+	/*border-right:20px solid #07cbc9; */  /*三角形背景颜色*/
+	border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+}
+.about-foot div .triangle-l{
+	border-right:20px solid #07cbc9;   /*三角形背景颜色及左方向*/
+}
+.about-foot div .triangle-r{
+	border-left:20px solid #07cbc9;      /*三角形背景颜色及右方向*/
+	left: 0;
+}
+.about-foot div h1{
+	margin:20px 0 10px 50px;
+	color: #fff;
+	font-size: 25px;
+}
+.about-foot div p{
+	font-size: 13px;
+	margin: 0 30px 10px  50px;
+	color: #fff;
+}
+.about-foot div .p-little{
+	font-size: 10px;
+	color: rgb(255,255,255,0.8);
+}
+.about-foot div button{
+	width: 80px;
+	height: 40px;
+	background-color: black;
+	color:#fff;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-left: 120px;
+}
+.about-foot div button:hover{
+	background-color: #fff;
+	color: #000;
+	border:2px solid black;
+}
+/*about区结束*/
+/*gallery区开始*/
+.gallery{
+	width:100%;
+	margin:0 auto;   /*自适应居中显示*/
+}
+.gallery-top{
+	width: 40%;
+	text-align: center;
+	margin: 0 auto;
+}
+.about-line{
+	height: 10px;
+	width: 50px;
+	border-bottom: 2px solid #07cbc9;
+	margin: 0 auto;
+}
+.gallery-top p{
+	margin-top: 10px;
+	color: rgba(0,0,0,0.5);
+}
+.gallery-foot{
+	width: 60%;
+	margin:0 auto;
+	margin-top: 20px;
+	/*border:1px solid red;*/   /* 辅助框*/
+	overflow: hidden;                /*清除浮动*/
+}
+.gallery-foot ul{
+	display: inline-block;
+	text-align: center;            /*居中显示*/
+}
+.gallery-foot li{
+	display: inline-block;
+	width: 30%;
+    margin: 8px;
+    position: relative;
+}
+.gallery-foot li img{
+	width: 100%;
+}
+.gallery-foot li h6{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+}
+
+/*gallery区结束*/
+/*footer区开始*/
+.footer{
+	width: 100%;
+	height: 80px;
+	line-height: 80px;
+	background-color:  #07cbc9;
+	margin-top: 50px;
+}
+.footer p{
+	text-align: center;
+	color: rgba(255,255,255,0.8);
+}
+
+
+
+
+
+
+
+
